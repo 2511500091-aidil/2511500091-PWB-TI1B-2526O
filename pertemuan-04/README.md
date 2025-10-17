@@ -8,4 +8,5 @@ Hari ini, Rabu 15 Oktober 2025, saya mempelajari;
    <li>ganti internal css ke eksternal css</li>
    <li>styling header</li>
    <li>styling section #home</li>
+   <li>styling navigasi</li>
 </ul>
