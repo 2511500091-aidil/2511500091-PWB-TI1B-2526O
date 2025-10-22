@@ -163,7 +163,7 @@ footer {
   background: none;
   border: none;
   color: #fff;
-  font-size: 20px\;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -173,6 +173,10 @@ footer {
     position: absolute;
     left: 16px;
     top: 8px;
+  }
+
+  header {
+    position: relative;
   }
 
   nav {
