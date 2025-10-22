@@ -151,7 +151,6 @@ header li a:active {
   transform: translateY(-1px);
 }
 
-/* Footer */
 footer {
   background: #222;
   color: #aaa;
@@ -159,7 +158,15 @@ footer {
   padding: 10px;
 }
 
-/* Responsive design */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px\;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   header {
     padding: 16px;
