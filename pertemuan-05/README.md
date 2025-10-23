@@ -11,4 +11,8 @@ Hari ini, Rabu 15 Oktober 2025, saya mempelajari;
    <li>styling nav mobile</li>
    <li>styling nav menu mobile</li>
    <li>membuat script.js</li>
+   <li>menambahkan validasi formulir sebelum submit</li>
+   <li>mengganti teks tombol saat menu aktif</li>
+   <li>membuat ucapan otomatis saat halaman dibuat</li>
+   <li>menambahkan hitung jumlah karakter pesan</li>
 </ul>

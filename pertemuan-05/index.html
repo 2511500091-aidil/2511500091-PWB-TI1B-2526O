@@ -9,8 +9,7 @@
 <body>
   <header>
     <h1>Ini Header</h1>
-    <button 
-        class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
@@ -52,6 +51,7 @@
 
         <label for="txtPesan"><span>Pesan Anda:</span>
           <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <small id="charCount">0/200 karakter</small>
         </label>
 
         <button type="submit">Kirim</button>
