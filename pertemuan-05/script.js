@@ -12,7 +12,7 @@ document.getElementById("menuToggle").addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", function () {
   function setupCharCountLayout() {
     const label = document.querySelector('label[for="txtPesan"]');
-    if (!label) return;
+    if (!label) return;1
 
     let wrapper = label.querySelector('[data-wrapper="pesan-wrapper"]');
     const span = label.querySelector('span');
@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function() {
   ucapan.textContent = "Halo! Selamat datang di halaman saya!";
   homeSection.appendChild(ucapan);
 });
-
 
 document.getElementById("txtPesan").addEventListener("input", function () {
 const panjang = this.value.length;
