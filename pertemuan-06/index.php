@@ -22,8 +22,17 @@
     <section id="home">
       <h2>Selamat Datang</h2>
       <p>Ini contoh paragraf HTML.</p>
+      <?php
+      echo"Halo Dunia";
+      echo"Nama Saya Muhammad Aidil Zaky";
+      ?>
     </section>
     <section id="about">
+        <?php
+        $NIM = "2511500091";
+        $nim = "2511500090";
+        $nim = "";
+        ?>
       <h2>Tentang Saya</h2>
       <p><strong>NIM:</strong> 2511500091</p>
       <p><strong>Nama Lengkap:</strong> Muhammad Aidil Zaky&#128526;</p>
