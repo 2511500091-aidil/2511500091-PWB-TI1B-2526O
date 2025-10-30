@@ -6,4 +6,5 @@ Nama : Muhammad AIdil Zaky<br>
 belajar:<br>
 <ul>
     <li>echo di hello.php</li>
+    <li>copy paste index.html, style.css, dan script.js ke folder pertemuan-06</li>
 </ul>
