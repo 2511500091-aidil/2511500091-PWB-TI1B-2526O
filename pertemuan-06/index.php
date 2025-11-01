@@ -81,7 +81,7 @@
   </main>
 
   <footer>
-    <p>&copy; <?= $nama_lengkap; ?> [<?= $nim; ?>]</p>
+    <p>&copy; Muhammad Aidil Zaky [2511500091}</p>
   </footer>
 
   <script src="script.js"></script>
