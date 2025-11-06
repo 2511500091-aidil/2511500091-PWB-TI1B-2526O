@@ -43,8 +43,8 @@
       $adik_laki       = "Faris Fatih";
       $adik_perempuan  = "Aura Aliana";
       ?>
-
-<?php
+      
+    <?php
     $namaMatkul1 = "Algoritma dan Struktur Data";
     $sksMatkul1 = 4;
     $nilaiHadir1 = 85;
@@ -365,9 +365,9 @@
         <div class="label">Tugas :</div>
         <div class="value"><?php echo $nilaiTugas5; ?></div>
       </div>
-      <div class="row">
-        <div class="label">UTS :</div>
-        <div class="value"><?php echo $nilaiUTS5; ?></div>
+      <div class="ro  ">
+        <div class="  abel">UTS :</div>
+        <div class="  alue"><?php echo $nilaiUTS5; ?></div>
       </div>
       <div class="row">
         <div class="label">UAS :</div>
@@ -423,7 +423,8 @@
     <section id="about">
       <h2>Tentang Saya</h2>
       <div class="about-container">
-        <p><strong>NIM:</strong> <?php echo $nim; ?></p>
+
+        <p><strong>NIM:</strong></p>
         <p><strong>Nama Lengkap:</strong> <?php echo $nama_lengkap; ?></p>
         <p><strong>Tempat Lahir:</strong> <?php echo $tempat_lahir; ?></p>
         <p><strong>Tanggal Lahir:</strong> <?php echo $tanggal_lahir; ?></p>
