@@ -107,6 +107,7 @@ header li a:active {
   flex-shrink: 0;
 }
 
+#dataentry input,
 #contact input,
 #contact textarea {
   flex: 1;
@@ -119,6 +120,7 @@ header li a:active {
   box-sizing: border-box;
 }
 
+#dataentry button,
 #contact button {
   margin-top: 10px;
   display: inline-block;
@@ -131,12 +133,14 @@ header li a:active {
   margin-right: 8px;
 }
 
+#dataentry button[type="submit"],
 #contact button[type="submit"] {
   background-color: #003366;
   color: #fff;
   font-weight: 600;
 }
 
+#dataentry button[type="reset"],
 #contact button[type="reset"] {
   background-color: #b4b4b4;
   color: #272727;
