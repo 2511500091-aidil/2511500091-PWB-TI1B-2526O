@@ -11,4 +11,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>menambahkan section id #dataentry</li>
   <li>menyesuaikan style.css section id #dataentry sesuai dengan #contact</li>
   <li>merapikan section id #dataentry dan menyesuaikannya dengan style.css</li>
+  <li>memvalidasi form handling pada section #dataentry</li>
+  <li>finalisasi uts dan menyempurnakan index.php</li>
 </ol>
