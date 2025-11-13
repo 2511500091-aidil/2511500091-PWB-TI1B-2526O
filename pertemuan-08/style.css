@@ -88,6 +88,7 @@ header li a:active {
 }
 
 #about p,
+#dataentry label,
 #contact label {
   display: flex;
   justify-content: flex-start;
@@ -98,6 +99,7 @@ header li a:active {
 }
 
 #about strong,
+#dataentry label>span,
 #contact label>span {
   min-width: 180px;
   color: #003366;
@@ -109,6 +111,7 @@ header li a:active {
 
 #dataentry input,
 #contact input,
+#dataentry textarea,
 #contact textarea {
   flex: 1;
   border: 1px solid #ccc;
@@ -147,12 +150,14 @@ header li a:active {
   font-weight: 500;
 }
 
+#dataentry button[type="submit"]:hover,
 #contact button[type="submit"]:hover {
   background-color: #0379ee;
   transform: translateY(-1px);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+#dataentry button[type="reset"]:hover,
 #contact button[type="reset"]:hover {
   background-color: #cccccc;
   transform: translateY(-1px);

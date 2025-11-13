@@ -58,44 +58,44 @@ endif;
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>NIM:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="nama">
         </label>
 
-        <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan nama lengkap" required autocomplete="email">
+        <label for="txtEmail"><span>Nama Lengkap:</span>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan nama lengkap" required autocomplete="nama lengkap">
         </label>
 
-        <label for="txtPesan"><span>Tempat Lahir:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan tempat lahir" required></textarea>
-          <small id="charCount">0/200 karakter</small>
+        <label for="txtTL"><span>Tempat Lahir:</span>
+          <input id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan tempat lahir" required autocomplete="tempat lahir">
         </label>
 
         <label for="txtNama"><span>Tanggal Lahir:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan tanggal lahir" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan tanggal lahir" required autocomplete="tanggal lahir">
         </label>
 
         <label for="txtEmail"><span>Hobi</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan hobi anda" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan hobi anda" required autocomplete="hobi">
         </label>
 
         <label for="txtPesan"><span>Pasangan:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan pekerjaan anda" required></textarea>
-          <small id="charCount">0/200 karakter</small>
+          <input id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan nama pasangan" required autocomplete="hobi">
+        </label>
+
+        <label for="txtPesan"><span>Pekerjaan:</span>
+          <input id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan pekerjaan anda" required autocomplete="pasangan">
         </label>
 
         <label for="txtNama"><span>Nama Orang Tua:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama orang tua" required autocomplete="name">
         </label>
 
         <label for="txtEmail"><span>Nama Kakak:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan nama" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan nama kakak" required autocomplete="name">
         </label>
 
         <label for="txtPesan"><span>Nama Adik:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan nama" required></textarea>
-          <small id="charCount">0/200 karakter</small>
+          <input id="txtPesan" name="txtPesan" rows="4" placeholder="masukkan nama adik" required autocomplete="name">
         </label>
-
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>

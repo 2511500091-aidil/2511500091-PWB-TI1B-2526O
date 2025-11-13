@@ -2,11 +2,13 @@
 
 silahkan sesuaikan dengan milik kalian masing-masing:<br><br>
 Hari ini, Rabu 12.NOV.2025, saya:<br>
-NIM: 0344300002<br>
-Nama: Yohanes Setiawan Japriadi<br>
-Kelompok: TI1A<br>
+NIM: 2511500091<br>
+Nama: Muhammad Aidil Zaky<br>
+Kelompok: TI1B<br>
 <br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
-  <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
+  <li>menambahkan section id #dataentry</li>
+  <li>menyesuaikan style.css section id #dataentry sesuai dengan #contact</li>
+  <li>merapikan section id #dataentry dan menyesuaikannya dengan style.css</li>
 </ol>
