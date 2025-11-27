@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/fungsi.php';
+
 $sesnama = "";
 if (isset($_SESSION["sesnama"])):
   $sesnama = $_SESSION["sesnama"];
@@ -65,52 +67,6 @@ $fieldConfig = [
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
-    <section id="php-array">
-  <h2>Mempelajari PHP Array</h2>
-
-  <?php
-  $buah = ["Apel", "Jeruk", "Mangga", "Pisang"];
-
-  $mahasiswa_array = [
-      "nama" => "Aidil",
-      "nim" => "2511500091",
-      "jurusan" => "Informatika"
-  ];
-
-  $produk = [
-      ["Laptop", 7000000, "Elektronik"],
-      ["Mouse", 150000, "Aksesoris"],
-      ["Keyboard", 300000, "Aksesoris"]
-  ];
-  ?>
-
-  <h3>Indexed Array</h3>
-  <p><strong>Daftar Buah:</strong></p>
-  <pre><?php print_r($buah); ?></pre>
-  <p>Buah pertama: <?= $buah[0] ?></p>
-
-  <h3>Associative Array</h3>
-  <pre><?php print_r($mahasiswa_array); ?></pre>
-  <p>Nama Mahasiswa: <?= $mahasiswa_array["nama"] ?></p>
-
-  <h3>Multidimensional Array</h3>
-  <?php foreach ($produk as $p): ?>
-    <p>
-      Nama: <?= $p[0] ?> |
-      Harga: <?= $p[1] ?> |
-      Kategori: <?= $p[2] ?>
-    </p>
-  <?php endforeach; ?>
-
-  <h3>Contoh Fungsi Array</h3>
-  <p>Jumlah buah: <?= count($buah) ?></p>
-  <p>Apakah ada 'Apel'? 
-    <?= in_array("Apel", $buah) ? "Ada" : "Tidak Ada" ?>
-  </p>
-
-</section>
-
-
     <section id="biodata">
       <h2>Biodata Sederhana Mahasiswa</h2>
       <form action="proses.php" method="POST">
@@ -161,16 +117,14 @@ $fieldConfig = [
 
     </section>
 
-    <section id="about">
-      <h2>Tentang Saya</h2>
-      <?php foreach ($fieldConfig as $kunci => $metadata): ?>
-    <p>
-        <strong><?= $metadata["label"] ?></strong>
-        <?= htmlspecialchars(string: $biodata[$kunci] ?? "") ?>
-        <?= $metadata["suffix"] ?>
-      </p>
-    <?php endforeach; ?>
-  </section>
+      <section id="about">
+  ``  <h2>Tentang Saya</h2>
+  ``  <?php 
+        $biodata = $_SESSION["biodata"] ?? []; 
+        echo tampilkanBiodata(conf: $fieldConfig, arr: $biodata); 
+      ?>
+    </section>
+
 
     <section id="contact">
       <h2>Kontak Kami</h2>
