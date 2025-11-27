@@ -49,10 +49,12 @@ $sesadik = $_SESSION["adik"] ?? "";
       <h2>Selamat Datang</h2>
       <?php
       echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "nama saya hadi";E_WARNING 
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
+
+    
 
     
     <section id="dataentry">

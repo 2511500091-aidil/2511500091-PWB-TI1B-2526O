@@ -15,6 +15,7 @@ if (isset($_POST["submit_data"])) {
 }
 
 
+
 if (isset($_POST["submit_contact"])) {
   $_SESSION["sesnama"] = $_POST["txtNama"];
   $_SESSION["sesemail"] = $_POST["txtEmail"];
