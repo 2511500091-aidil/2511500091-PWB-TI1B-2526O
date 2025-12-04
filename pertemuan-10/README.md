@@ -11,4 +11,5 @@ Kelompok: TI1B<br>
 
 <ol>
     <li>membuat file konseksi.php</li>
+    <li>membuat database menggunakan phpMyAdmin</li>
 </ol>
