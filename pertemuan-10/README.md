@@ -12,4 +12,5 @@ Kelompok: TI1B<br>
 <ol>
     <li>membuat file konseksi.php</li>
     <li>membuat database menggunakan phpMyAdmin</li>
+    <li>membuat tbl_tamu di database phpMyAdmin</li>
 </ol>
