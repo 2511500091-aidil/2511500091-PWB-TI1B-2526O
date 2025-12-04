@@ -17,4 +17,5 @@ Kelompok: TI1B<br>
     <li>membuat data untul tbl_tamu</li>
     <li>memperbaiki error di file koneksi.php</li>
     <li>membuat file read_inc.php</li>
+    <li>mengganti baris 146 di file index.php</li>
 </ol>
