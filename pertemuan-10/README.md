@@ -14,4 +14,5 @@ Kelompok: TI1B<br>
     <li>membuat database menggunakan phpMyAdmin</li>
     <li>membuat tbl_tamu di database phpMyAdmin</li>
     <li>membuat file read.php</li>
+    <li>membuat data untul tbl_tamu</li>
 </ol>
