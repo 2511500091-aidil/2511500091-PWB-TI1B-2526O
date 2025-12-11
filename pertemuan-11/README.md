@@ -9,4 +9,5 @@ Hari ini, Kamis 11 Desember 2025 saya belajar:<br>
     <li>update file fungsi.php</li>
     <li>menambah penangkap pesan sukses/gagal (flash message dari SESSION)</li>
     <li>menampilkan flash message</li>
+    <li>menampilkan nilai lama dari form untuk antisipasi jika error, pengguna cukup mengubah data yang sudah ada</li>
 </ol>
