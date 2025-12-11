@@ -11,4 +11,5 @@ Hari ini, Kamis 11 Desember 2025 saya belajar:<br>
     <li>menampilkan flash message</li>
     <li>menampilkan nilai lama dari form untuk antisipasi jika error, pengguna cukup mengubah data yang sudah ada</li>
     <li>cek reqeust METHOD apakah sudah menggunakan POST</li>
+    <li>INSERT tbl_tamu dengan prepared statement mysqli dan simpan pesan sukses/gagal ke $_SESSION serta redirect balik ke index.php#contact</li>
 </ol>
