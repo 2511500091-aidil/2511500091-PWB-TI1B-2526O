@@ -10,4 +10,5 @@ Hari ini, Kamis 11 Desember 2025 saya belajar:<br>
     <li>menambah penangkap pesan sukses/gagal (flash message dari SESSION)</li>
     <li>menampilkan flash message</li>
     <li>menampilkan nilai lama dari form untuk antisipasi jika error, pengguna cukup mengubah data yang sudah ada</li>
+    <li>cek reqeust METHOD apakah sudah menggunakan POST</li>
 </ol>
