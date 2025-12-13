@@ -12,6 +12,7 @@ $q   = mysqli_query($conn, $sql);
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
+        <th>Created At</th>
     </tr>
 
     <?php $no = 1; ?>
@@ -22,6 +23,7 @@ $q   = mysqli_query($conn, $sql);
         <td><?= htmlspecialchars($row['cnama']); ?></td>
         <td><?= htmlspecialchars($row['cemail']); ?></td>
         <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
+        <td><?= date('d-m-Y H:i:s', strtotime($row['dcreated_at'])); ?></td>
     </tr>
     <?php endwhile; ?>
 </table>
