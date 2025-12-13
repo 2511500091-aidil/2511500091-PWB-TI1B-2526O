@@ -118,6 +118,14 @@ require_once __DIR__ . '/fungsi.php';
       # bersihkan 3 session ini
       ?>
 
+      <?php
+
+      $angka1 = rand(1, 9);
+      $angka2 = rand(1, 9);
+
+      $_SESSION['captcha_jawaban'] = $angka1 * $angka2;
+      ?>
+
       <section id="contact">
       <h2>Kontak Kami</h2>
           <?php if (!empty($flash_sukses)): ?>
@@ -151,6 +159,9 @@ require_once __DIR__ . '/fungsi.php';
         required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
         <small id="charCount">0/200 karakter</small>
         </label>
+
+        <label>Captcha: <?= $angka1 ?> × <?= $angka2 ?> = ?</label><br>
+        <input type="number" name="txtCaptcha" required>
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>

@@ -67,6 +67,14 @@ if (mysqli_stmt_execute($stmt)) {
     redirect_ke("index.php#contact");
 }
 
+$captcha = $_POST['txtCaptcha'] ?? '';
+
+if ($captcha === '') {
+    $errors[] = 'Captcha wajib diisi.';
+} elseif ((int)$captcha !== ($_SESSION['captcha_jawaban'] ?? -1)) {
+    $errors[] = 'Jawaban captcha salah.';
+}
+
 mysqli_stmt_close($stmt);
 
 ?>
