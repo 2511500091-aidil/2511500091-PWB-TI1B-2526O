@@ -42,7 +42,7 @@ if (!$cid) {
     jika ada kesalahan, tampilkan penanda error.
 */
 
-$stmt = mysqli_prepare($conn, "SELECT cid, cname, cemail, cpesan 
+$stmt = mysqli_prepare($conn, "SELECT cid, cnama, cemail, cpesan
                                FROM tbl_tamu WHERE cid = ? LIMIT 1");
 
 if (!$stmt) {
@@ -62,7 +62,7 @@ if (!$row) {
 }
 
 #Nilai awal (prefill form)
-$nama  = $row['cname'] ?? '';
+$nama  = $row['cnama'] ?? '';
 $email = $row['cemail'] ?? '';
 $pesan = $row['cpesan'] ?? '';
 
