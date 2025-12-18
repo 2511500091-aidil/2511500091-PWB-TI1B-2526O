@@ -86,14 +86,14 @@ if (!$stmt) {
 }
 
 # bind parameter dan eksekusi (s = string, i = integer)
-mysqli_stmt_bind_param($stmt, 'sssi', $cnama, $cemail, $cpesan, $cid);
+mysqli_stmt_bind_param($stmt, 'sssi', $nama, $email, $pesan, $cid);
 
 if (mysqli_stmt_execute($stmt)) {
     # jika berhasil, kosongkan old value
     unset($_SESSION['old']);
 
     # Redirect balik ke read.php dan tampilkan info sukses.
-    $_SESSION['flash_success'] = 'Terima kasih, data Anda sudah diperbaharui.';
+    $_SESSION['flash_sukses'] = 'Terima kasih, data Anda sudah diperbaharui.';
     redirect_ke('read.php'); # pola PRG kembali ke data dan exit()
 }
 
