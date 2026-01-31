@@ -1,7 +1,7 @@
 <?php
   session_start();
-  require 'koneksi.php';
-  require 'fungsi.php';
+  require_once 'koneksi.php';
+  require_once 'fungsi.php';
 
   /*
     Ambil nilai cid dari GET dan lakukan validasi untuk 

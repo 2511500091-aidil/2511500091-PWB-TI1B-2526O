@@ -1,7 +1,7 @@
 <?php
-require 'koneksi.php';
+require_once "koneksi.php";
 
-$id   = $_POST['id_anggota'];
+$id = $_POST['id_anggota'];
 
 $sql = "UPDATE tbl_anggota SET
     nomor_anggota = ?,
@@ -14,9 +14,10 @@ $sql = "UPDATE tbl_anggota SET
     batalion_anggota = ?,
     berat_badan = ?,
     tinggi_badan = ?
-    WHERE id_anggota = ?";
+WHERE id_anggota = ?";
 
 $stmt = mysqli_prepare($koneksi, $sql);
+
 mysqli_stmt_bind_param(
     $stmt,
     "sssssdssiii",

@@ -1,7 +1,7 @@
 <?php
-require 'koneksi.php';
+require_once 'koneksi.php';
 
-$query = mysqli_query($koneksi, "SELECT * FROM tbl_anggota ORDER BY id_anggota ASC");
+$query = mysqli_query($koneksi, "SELECT * FROM tbl_anggota");
 ?>
 
 <h2>Daftar Anggota</h2>
@@ -15,7 +15,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM tbl_anggota ORDER BY id_anggota A
         <th>Tanggal Jadi</th>
         <th>Kemampuan</th>
         <th>Gaji</th>
-        <th>No WA</th>
+        <th>Nomor WA</th>
         <th>Batalion</th>
         <th>BB</th>
         <th>TB</th>

@@ -1,5 +1,5 @@
 <?php
-require 'koneksi.php';
+require_once 'koneksi.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -18,16 +18,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // ================= SANITASI =================
-    $nomor      = htmlspecialchars(trim($_POST['txtNoAng']));
-    $nama       = htmlspecialchars(trim($_POST['txtNamAng']));
-    $jabatan    = htmlspecialchars(trim($_POST['txtJabAng']));
-    $tgl_jadi   = $_POST['txtTglJadi'];
-    $kemampuan  = htmlspecialchars(trim($_POST['txtSkill']));
-    $gaji       = (float) $_POST['txtGaji'];
-    $wa         = htmlspecialchars(trim($_POST['txtNoWA']));
-    $batalion   = htmlspecialchars(trim($_POST['txtBatalion']));
-    $bb         = (int) $_POST['txtBB'];
-    $tb         = (int) $_POST['txtTB'];
+    $nomor_anggota      = htmlspecialchars(trim($_POST['txtNoAng']));
+    $nama_anggota       = htmlspecialchars(trim($_POST['txtNamAngx`']));
+    $jabatan_anggota    = htmlspecialchars(trim($_POST['txtJabAng']));
+    $tanggal_jadi   = $_POST['txtTglJadi'];
+    $kemampuan_anggota  = htmlspecialchars(trim($_POST['txtSkill']));
+    $gaji_anggota       = (float) $_POST['txtGaji'];
+    $nomor_wa         = htmlspecialchars(trim($_POST['txtNoWA']));
+    $batalion_anggota   = htmlspecialchars(trim($_POST['txtBatalion']));
+    $berat_badan         = (int) $_POST['txtBB'];
+    $tinggi_badan         = (int) $_POST['txtTB'];
 
     // ================= INSERT =================
     $sql = "INSERT INTO tbl_anggota 
@@ -40,17 +40,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_stmt_bind_param(
         $stmt,
         "sssssdssii",
-        $nomor,
-        $nama,
-        $jabatan,
-        $tgl_jadi,
-        $kemampuan,
-        $gaji,
-        $wa,
-        $batalion,
-        $bb,
-        $tb
-    );
+        $_POST['nomor_anggota'],
+        $_POST['nama_anggota'],
+        $_POST['jabatan_anggota'],
+        $_POST['tanggal_jadi'],
+        $_POST['kemampuan_anggota'],
+        $_POST['gaji_anggota'],
+        $_POST['nomor_wa'],
+        $_POST['batalion_anggota'],
+        $_POST['berat_badan'],
+        $_POST['tinggi_badan'],
+        );
 
 if (!mysqli_stmt_execute($stmt)) {
     echo "<h3>INSERT GAGAL</h3>";
