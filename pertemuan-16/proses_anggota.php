@@ -1,26 +1,58 @@
 <?php
-session_start();
-require __DIR__ . './koneksi.php';
-require_once __DIR__ . '/fungsi.php';
+require 'koneksi.php';
 
-/*
-	ikuti cara penulisan proses.php untuk validasi, sanitasi, RPG, data old
-	dan insert ke tbl_tamu termasuk flash message ke index.php#anggota
-	bedanya, kali ini diterapkan untuk anggota dosen bukan tamu
-*/
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-$arrAnggota = [
-  "noang" => $_POST["txtNoAng"] ?? "",
-  "nama" => $_POST["txtNmAng"] ?? "",
-  "jabatan" => $_POST["txtJabAng"] ?? "",
-  "tanggal" => $_POST["txtTglJadi"] ?? "",
-  "skill" => $_POST["txtSkill"] ?? "",
-  "gaji" => $_POST["txtGaji"] ?? "",
-  "nowa" => $_POST["txtNoWA"] ?? "",
-  "batalion" => $_POST["txBatalion"] ?? "",
-  "bb" => $_POST["txtBB"] ?? "",
-  "tb" => $_POST["txtTB"] ?? ""
-];
-$_SESSION["anggota"] = $arrAnggota;
+    $required = [
+        'txtNoAng', 'txtNmAng', 'txtJabAng', 'txtTglJadi',
+        'txtSkill', 'txtGaji', 'txtNoWA',
+        'txBatalion', 'txtBB', 'txtTB'
+    ];
 
-header("location: index.php#anggota");
+    foreach ($required as $field) {
+        if (empty($_POST[$field])) {
+            header("Location: anggota.php?status=gagal");
+            exit;
+        }
+    }
+
+    $no_anggota   = htmlspecialchars(trim($_POST['txtNoAng']));
+    $nama         = htmlspecialchars(trim($_POST['txtNmAng']));
+    $jabatan      = htmlspecialchars(trim($_POST['txtJabAng']));
+    $tgl_jadi     = $_POST['txtTglJadi'];
+    $skill        = htmlspecialchars(trim($_POST['txtSkill']));
+    $gaji         = (float) $_POST['txtGaji'];
+    $no_wa        = htmlspecialchars(trim($_POST['txtNoWA']));
+    $batalion     = htmlspecialchars(trim($_POST['txBatalion']));
+    $bb           = (int) $_POST['txtBB'];
+    $tb           = (int) $_POST['txtTB'];
+
+    $sql = "INSERT INTO tbl_anggota
+            (no_anggota, nama_anggota, jabatan, tanggal_jadi, skill,
+             gaji, no_wa, batalion, berat_badan, tinggi_badan)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($koneksi, $sql);
+    mysqli_stmt_bind_param(
+        $stmt,
+        "sssssdssii",
+        $no_anggota,
+        $nama,
+        $jabatan,
+        $tgl_jadi,
+        $skill,
+        $gaji,
+        $no_wa,
+        $batalion,
+        $bb,
+        $tb
+    );
+
+    if (mysqli_stmt_execute($stmt)) {
+        header("Location: anggota.php?status=sukses");
+        exit;
+    } else {
+        header("Location: anggota.php?status=gagal");
+        exit;
+    }
+}
