@@ -57,7 +57,7 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <label for="txtNmAng"><span>Nama Anggota:</span>
-          <input type="text" id="txtNmAng" name="txtNmAng" placeholder="Masukkan Nama Anggota" required>
+          <input type="text" id="txtNmAng" name="txtNamAng" placeholder="Masukkan Nama Anggota" required>
         </label>
 
         <label for="txtJabAng"><span>Jabatan Anggota:</span>

@@ -19,13 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // ================= SANITASI =================
     $nomor      = htmlspecialchars(trim($_POST['txtNoAng']));
-    $nama       = htmlspecialchars(trim($_POST['txtNmAng']));
+    $nama       = htmlspecialchars(trim($_POST['txtNamAng']));
     $jabatan    = htmlspecialchars(trim($_POST['txtJabAng']));
     $tgl_jadi   = $_POST['txtTglJadi'];
     $kemampuan  = htmlspecialchars(trim($_POST['txtSkill']));
     $gaji       = (float) $_POST['txtGaji'];
     $wa         = htmlspecialchars(trim($_POST['txtNoWA']));
-    $batalion   = htmlspecialchars(trim($_POST['txBatalion']));
+    $batalion   = htmlspecialchars(trim($_POST['txtBatalion']));
     $bb         = (int) $_POST['txtBB'];
     $tb         = (int) $_POST['txtTB'];
 
@@ -52,10 +52,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $tb
     );
 
-    if (mysqli_stmt_execute($stmt)) {
-        header("Location: index.php?status=sukses"); // PRG
-    } else {
-        header("Location: index.php?status=gagal");
-    }
+if (!mysqli_stmt_execute($stmt)) {
+    echo "<h3>INSERT GAGAL</h3>";
+    echo "MySQL Error: " . mysqli_error($koneksi) . "<br><br>";
+
+    echo "Data POST:<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+
     exit;
+}
+
+header("Location: index.php?status=sukses");
+exit;
 }

@@ -11,4 +11,9 @@ hari ini, Pada UAS tanggal Sabtu 31 Januari 2026 saya melakukan:
     <li>menambahkan file .sql ke dalam repository</li>
     <li>update file proses_anggota.php dan index.php</li>
     <li>update tbl_aidil.sql menjadi tbl_anggota.sql</li>
+    <li>membuat file baca anggota.php</li>
+    <li>membuat file edit_anggota.php</li>
+    <li>membuat file proses_edit.php</li>
+    <li>membuat file proses_hapus.php</li>
+    <l>membuat tbl_anggota baru</li>
 <ol>
