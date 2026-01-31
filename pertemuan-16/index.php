@@ -38,6 +38,16 @@ require_once __DIR__ . '/fungsi.php';
       <p>Ini contoh paragraf HTML.</p>
     </section>
 
+    <?php
+    if (isset($_GET['status'])) {
+    if ($_GET['status'] == 'sukses') {
+        echo "<p style='color:green'>Data anggota berhasil disimpan</p>";
+    } elseif ($_GET['status'] == 'gagal') {
+        echo "<p style='color:red'>Data anggota gagal disimpan</p>";
+    }
+  }
+?>
+
     <section id="anggota">
       <h2>Data Anggota</h2>
       <form action="proses_anggota.php" method="POST">

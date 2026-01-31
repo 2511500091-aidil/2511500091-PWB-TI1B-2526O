@@ -9,4 +9,6 @@ hari ini, Pada UAS tanggal Sabtu 31 Januari 2026 saya melakukan:
     <li>copy paste file uas dari whatsapp ke localhost</li>
     <li>edit file proses_anggota.php</li>
     <li>menambahkan file .sql ke dalam repository</li>
+    <li>update file proses_anggota.php dan index.php</li>
+    <li>update tbl_aidil.sql menjadi tbl_anggota.sql</li>
 <ol>
